@@ -11,6 +11,7 @@ import com.squareup.leakcanary.RefWatcher;
 
 import org.litepal.LitePal;
 
+import io.rong.imlib.RongIMClient;
 import me.yokeyword.fragmentation.Fragmentation;
 import me.yokeyword.fragmentation.helper.ExceptionHandler;
 import timber.log.Timber;
@@ -26,10 +27,15 @@ public class MyAppLifecycles implements AppLifecycles {
         initLeakCanary(application);
         initFragmentation();
         initARouter(application);
-        initGreenDao(application);
+        initRongIMClient(application);
+        initLitePal(application);
     }
 
-    private void initGreenDao(Application application) {
+    private void initRongIMClient(Application application) {
+        RongIMClient.init(application);
+    }
+
+    private void initLitePal(Application application) {
         LitePal.initialize(application);
     }
 

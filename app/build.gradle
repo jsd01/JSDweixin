@@ -41,7 +41,7 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
     implementation rootProject.ext.dependencies["design"]
     implementation rootProject.ext.dependencies["appcompat-v7"]
     implementation 'me.jessyan:arms:2.4.1'
@@ -52,7 +52,7 @@ dependencies {
     debugImplementation rootProject.ext.dependencies["canary-debug"]
     implementation rootProject.ext.dependencies["fragmentation-core"]
     implementation rootProject.ext.dependencies["retrofit-url-manager"]
-
     //DB
     implementation rootProject.ext.dependencies["litepal"]
+    implementation project(':IMLib')
 }
