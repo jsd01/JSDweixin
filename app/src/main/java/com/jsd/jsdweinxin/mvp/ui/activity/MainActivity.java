@@ -9,6 +9,7 @@ import com.jess.arms.base.BaseActivity;
 import com.jess.arms.di.component.AppComponent;
 import com.jess.arms.utils.ArmsUtils;
 
+import com.jsd.jsdweinxin.app.base.BaseSupportActivity;
 import com.jsd.jsdweinxin.di.component.DaggerMainComponent;
 import com.jsd.jsdweinxin.di.module.MainModule;
 import com.jsd.jsdweinxin.mvp.contract.MainContract;
@@ -20,7 +21,7 @@ import com.jsd.jsdweinxin.R;
 import static com.jess.arms.utils.Preconditions.checkNotNull;
 
 
-public class MainActivity extends BaseActivity<MainPresenter> implements MainContract.View {
+public class MainActivity extends BaseSupportActivity<MainPresenter> implements MainContract.View {
 
     @Override
     public void setupActivityComponent(@NonNull AppComponent appComponent) {
