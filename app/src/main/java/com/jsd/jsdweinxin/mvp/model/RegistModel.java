@@ -12,6 +12,8 @@ import javax.inject.Inject;
 
 import com.jsd.jsdweinxin.mvp.contract.RegistContract;
 
+import io.reactivex.Observable;
+
 
 @ActivityScope
 public class RegistModel extends BaseModel implements RegistContract.Model {
@@ -30,5 +32,10 @@ public class RegistModel extends BaseModel implements RegistContract.Model {
         super.onDestroy();
         this.mGson = null;
         this.mApplication = null;
+    }
+
+    @Override
+    public Observable<Object> checkPhoneAvailable(String region, String phone) {
+        return null;
     }
 }

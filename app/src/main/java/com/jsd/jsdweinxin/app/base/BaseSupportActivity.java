@@ -1,12 +1,17 @@
 package com.jsd.jsdweinxin.app.base;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.TextUtils;
 import android.view.MotionEvent;
+import android.view.View;
+import android.widget.TextView;
 
 import com.jess.arms.base.BaseActivity;
 import com.jess.arms.mvp.IPresenter;
+import com.jsd.jsdweinxin.R;
 
 import me.yokeyword.fragmentation.ExtraTransaction;
 import me.yokeyword.fragmentation.ISupportActivity;
@@ -185,5 +190,6 @@ public abstract class BaseSupportActivity<P extends IPresenter> extends BaseActi
     public <T extends ISupportFragment> T findFragment(Class<T> fragmentClass) {
         return SupportHelper.findFragment(getSupportFragmentManager(), fragmentClass);
     }
+
 
 }

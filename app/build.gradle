@@ -55,4 +55,7 @@ dependencies {
     //DB
     implementation rootProject.ext.dependencies["litepal"]
     implementation project(':IMLib')
+    //UI
+    implementation rootProject.ext.dependencies["material-dialogs"]
+    implementation files('libs/pinyin4j-2.5.0.jar')
 }
